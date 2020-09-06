@@ -5,8 +5,8 @@ import { createStructuredSelector } from "reselect";
 
 import './App.css';
 import Header from  './components/header/header';
-import HomePage from './pages/homepage/homepage'; 
-import ShopPage from './pages/shop/shop'; 
+import HomePage from './pages/homepage/homepage';
+import ShopPage from './pages/shop/shop';
 import CheckoutPage from "./pages/checkout/checkout";
 import SignInAndSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up';
 import { auth } from './firebase/firebase.utils'
@@ -21,7 +21,7 @@ class App extends React.Component {
   componentDidMount(){
     const {setCurrentUser} = this.props;
     this.unsubscribeFromAuth =auth.onAuthStateChanged(async userAuth => {
-          
+
           if(userAuth){
             const userRef = await createUserProfileDocument(userAuth);
 
@@ -30,11 +30,11 @@ class App extends React.Component {
               id:snapShot.id,
               ...snapShot.data()
             })
-                  
-              
-              
+
+
+
             });
-            
+
     }
           else{
             setCurrentUser(userAuth)
