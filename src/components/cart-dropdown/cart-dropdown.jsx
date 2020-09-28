@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { withRouter } from 'react-router-dom';
 
-import CustomButton from '../custom-button/custom-button';
 import CartItem from '../cart-item/cart-item';
 import { selectCartItems } from '../../redux/cart/selectors';
 import { toggleCartHidden } from '../../redux/cart/actions';
