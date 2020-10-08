@@ -18,7 +18,6 @@ const SignIn = ({googleSignInStart,emailSignInStart}) => {
           event.preventDefault();
           emailSignInStart(email,password)
 
-          setCredentials({email:'',password:''})
        };
        
  const handleChange = event => {
